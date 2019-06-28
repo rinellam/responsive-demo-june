@@ -458,6 +458,7 @@ template {
 
 body {
   color: #048ca8;
+  text-align: center;
 }
 
 img {
@@ -477,6 +478,16 @@ img {
   list-style: none;
 }
 
+.lg--screen {
+  display: none;
+}
+
+.bg-primary {
+  background: #048ca8;
+  color: white;
+  padding: 5em 2.5em;
+}
+
 h1, h2, h3, h4, h5, h6, p {
   margin: 0 0 .75em;
 }
@@ -490,6 +501,7 @@ h1 {
   font-weight: 300;
   line-height: 1.15;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 h2 {
@@ -497,6 +509,35 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 2px;
   line-height: 1;
+}
+
+.title-box {
+  background: #d31869;
+  color: white;
+  margin: 0 auto;
+  padding: 2em;
+  -webkit-transform: translateY(30%);
+  -ms-transform: translateY(30%);
+  transform: translateY(30%);
+  max-width: 90%;
+}
+
+@media (min-width: 495px) {
+  .title-box {
+    -webkit-transform: translateY(50%);
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
+  }
+}
+
+.title-box + .bg-primary {
+  padding-top: 6em;
+}
+
+@media (min-width: 495px) {
+  .title-box + .bg-primary {
+    padding-top: 8em;
+  }
 }
 
 .title-large {
@@ -516,6 +557,20 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.col {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+}
+
+.col--full {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 
 .main-header {
@@ -703,6 +758,22 @@ h2 {
 
 .hamburger.is-open::before {
   opacity: 0;
+}
+
+.sales-points {
+  padding: 5vh 0 0;
+}
+
+.sales-point {
+  margin-bottom: 2.5em;
+}
+
+.sales-point:first-of-type {
+  margin-top: 1.5em;
+}
+
+.sales-point:last-child {
+  margin-bottom: 0;
 }
 
 .btn {
