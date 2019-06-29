@@ -22,6 +22,14 @@ h2
     letter-spacing: 2px
     line-height: 1
 
+.title-large
+    font-size: 3rem
+    font-weight: $font-black
+    line-height: .9
+
+    span
+        font-weight: $font-light
+
 .title-box
     background: $accent
     color: $text-inverse
@@ -37,11 +45,18 @@ h2
         @media (min-width: 495px)
             padding-top: 8em
 
-.title-large
-    font-size: 3rem
-    font-weight: $font-black
-    span
-        font-weight: $font-light
+.title-footer
+    text-transform: uppercase
+    letter-spacing: 3px
+    line-height: 1
+    
+    &::before, &::after
+        content: ''
+        display: block
+        height: 1px
+        background: $text-inverse
+        opacity: 0.25
+        margin: .75em 0
 
 .text-intro
     font-size: 1.2rem
